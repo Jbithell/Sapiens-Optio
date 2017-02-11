@@ -1,7 +1,12 @@
 (function($){
   $(function(){
       console.log("Window Loaded");
-
+        if ($('html').height() - $('body').height() > 0) {
+            //Fix footer height
+            //TODO Refactor this section
+            $("#index-banner").height($("#index-banner").height()+($('html').height() - $('body').height()));
+            console.log("Applying page height hotfix");
+        }
       //Load Google Anylitics Functions
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -136,5 +141,6 @@
       $(".reportissue").click(function() {
           $('#reportissuemodal').modal('open');
       });
+
   }); // end of document ready
 })(jQuery); // end of jQuery name space

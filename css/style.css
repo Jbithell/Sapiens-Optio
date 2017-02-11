@@ -15,3 +15,7 @@
 .hideapp {
     display: none;
 }
+html {
+    /* Required for page height hotfix */
+    height: 100%;
+}
