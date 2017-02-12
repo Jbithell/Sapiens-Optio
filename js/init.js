@@ -1,5 +1,6 @@
 (function($){
   $(function(){
+      var apiroot = "https://engine.sapiensoptio.com/";
       console.log("Window Loaded");
         if ($('html').height() - $('body').height() > 0) {
             //Fix footer height
@@ -29,7 +30,7 @@
 
               $.ajax({
                   type: "POST",
-                  url: "https://www.sapiensoptio.com/engine/?q=" + q + "&" + (type == "lateng" ? "lateng" : "englat"),
+                  url: apiroot + "?q=" + q + "&" + (type == "lateng" ? "lateng" : "englat"),
                   dataType: "text",
                   success: function(data) {
                       $("#loader").fadeOut(function(){
@@ -123,7 +124,8 @@
           });
           $("#translateresult").fadeOut();
           $("#loader").fadeIn();
-          $.ajax({url: "https://www.sapiensoptio.com/engine/random.php?lang=lat", success: function(result){
+          $.ajax({
+              url: apiroot + "random.php?lang=lat", success: function (result) {
               $("#q").val(result);
               translate("lateng", result);
           }});
@@ -135,7 +137,8 @@
           });
           $("#translateresult").fadeOut();
           $("#loader").fadeIn();
-          $.ajax({url: "https://www.sapiensoptio.com/engine/random.php?lang=eng", success: function(result){
+          $.ajax({
+              url: apiroot + "random.php?lang=eng", success: function (result) {
               $("#q").val(result);
               translate("englat", result);
           }});
