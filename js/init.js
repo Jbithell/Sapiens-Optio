@@ -86,8 +86,12 @@
       $(".starttranslation").click(function(){
           $("#footer").fadeOut();
           $("#index-banner").fadeOut(function () {
-              $("#translate-banner").fadeIn();
+              $("#translate-banner").fadeIn(function () {
+                  $("#q").focus();
+              });
+
           });
+
 
       });
 
@@ -120,6 +124,7 @@
           $("#translateresult").fadeOut();
           $("#loader").fadeIn();
           $.ajax({url: "https://www.sapiensoptio.com/engine/random.php?lang=lat", success: function(result){
+              $("#q").val(result);
               translate("lateng", result);
           }});
       });
@@ -131,6 +136,7 @@
           $("#translateresult").fadeOut();
           $("#loader").fadeIn();
           $.ajax({url: "https://www.sapiensoptio.com/engine/random.php?lang=eng", success: function(result){
+              $("#q").val(result);
               translate("englat", result);
           }});
       });
