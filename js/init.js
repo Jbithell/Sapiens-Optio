@@ -202,6 +202,11 @@
             downloadprintout($("#q").val(), $("#result").html());
         });
 
+        //Gohome link
+        $(".gohome").click(function () {
+            gohome();
+        });
+
         //Display report issue modal
         $(".reportissue").click(function () {
             $('#reportissuemodal').modal('open');
