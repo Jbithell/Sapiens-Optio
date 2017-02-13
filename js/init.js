@@ -125,8 +125,7 @@
 
         //Event Handlers and Hooks
         $(".starttranslation").click(function () {
-            $("#q").val(""); //Reset translate bar
-            $("#result").html(""); //Reset translation result
+            $("#translateresult").hide(); //Make sure the result isn't shown
             $("#footer").fadeOut();
             $("#index-banner").fadeOut(function () {
                 $("#translate-banner").fadeIn(function () {
