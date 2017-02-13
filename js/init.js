@@ -126,6 +126,7 @@
         //Event Handlers and Hooks
         $(".starttranslation").click(function () {
             $("#q").val(""); //Reset translate bar
+            $("#result").html(""); //Reset translation result
             $("#footer").fadeOut();
             $("#index-banner").fadeOut(function () {
                 $("#translate-banner").fadeIn(function () {
