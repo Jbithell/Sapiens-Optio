@@ -125,6 +125,7 @@
 
         //Event Handlers and Hooks
         $(".starttranslation").click(function () {
+            $("#q").val(""); //Clear any old results
             $("#translateresult").hide(); //Make sure the result isn't shown
             $("#footer").fadeOut();
             $("#index-banner").fadeOut(function () {
