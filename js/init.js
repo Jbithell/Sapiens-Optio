@@ -1,5 +1,3 @@
-//window.jQuery = window.$ = require('jquery'); // Make sure JQuery forced, for electron & phonegap mostly
-
 (function ($) {
     //Define Global Variables
     var apiroot = "https://engine.sapiensoptio.com/";
