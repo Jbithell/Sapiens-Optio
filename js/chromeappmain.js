@@ -3,7 +3,7 @@ chrome.app.runtime.onLaunched.addListener(function () {
     var screenWidth = screen.availWidth;
     var screenHeight = screen.availHeight;
     chrome.app.window.create('../index.html', {
-        id: "helloWorldID",
+        id: "SapiensOptio",
         outerBounds: {
             width: screenWidth,
             height: screenHeight,
