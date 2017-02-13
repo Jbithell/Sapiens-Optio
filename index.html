@@ -1,154 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Sapiens Optio - Free Online Latin to English and English to Latin Translation Tool</title>
-  <meta name="generator" content="Sapiens Optio" />
-
-  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Sapiens Optio - Free Online Latin to English and English to Latin Translation Tool</title>
+    <meta name="generator" content="Sapiens Optio"/>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-    <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="?" class="brand-logo">Sapiens Optio</a>
-        </div>
-    </nav>
-  <div class="section no-pad-bot" id="index-banner" >
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="?" class="brand-logo">Sapiens Optio</a>
+    </div>
+</nav>
+<div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <br><br>
-      <h1 class="header center orange-text">Sapiens Optio</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">Sapiens Optio is a fast free Latin translator, powered by William Whitaker's dictionary of over 39,000 words.</h5>
-      </div>
-      <div class="row center">
-        <button class="btn-large waves-effect waves-light orange starttranslation">Start Translating</button>
-      </div>
+        <br><br>
+        <h1 class="header center orange-text">Sapiens Optio</h1>
         <div class="row center">
-            <button class="btn waves-effect waves-light orange darken-2" style="margin-bottom: 8px;" id="latengtranslatebuttonrandom">Random Latin Word</button>
-            <button class="btn waves-effect waves-light orange darken-2" style="margin-bottom: 8px;" id="englattranslatebuttonrandom">Random English Word</button>
+            <h5 class="header col s12 light">Sapiens Optio is a fast free Latin translator, powered by William
+                Whitaker's dictionary of over 39,000 words.</h5>
+        </div>
+        <div class="row center">
+            <button class="btn-large waves-effect waves-light orange starttranslation">Start Translating</button>
+        </div>
+        <div class="row center">
+            <button class="btn waves-effect waves-light orange darken-2" style="margin-bottom: 8px;"
+                    id="latengtranslatebuttonrandom">Random Latin Word
+            </button>
+            <button class="btn waves-effect waves-light orange darken-2" style="margin-bottom: 8px;"
+                    id="englattranslatebuttonrandom">Random English Word
+            </button>
         </div>
         <br/><br/><br/>
         <div class="row center hideapp">
-            <a class="waves-effect waves-light btn-large black noapplink"  style="margin-bottom: 8px;" href="https://chrome.google.com/webstore/detail/ekeohajnaijgjgcelpbajmfddlonckfm/"><i class="fa fa-chrome right"></i>Chrome App</a>
-            <a class="waves-effect waves-light btn-large black noapplink"  style="margin-bottom: 8px;" href="https://play.google.com/store/apps/details?id=appinventor.ai_jbithell_JB80.SO"><i class="fa fa-google right"></i>Android App</a>
-            <a class="waves-effect waves-light btn-large black noapplink"  style="margin-bottom: 8px;" href="https://www.amazon.co.uk/Sapiens-Optio-Latin-English-Translator/dp/B00HUX2RTM/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1389856632&sr=1-1&keywords=Sapiens+Optio"><i class="fa fa-amazon right"></i>Amazon App</a>
+            <a class="waves-effect waves-light btn-large black noapplink" style="margin-bottom: 8px;"
+               href="https://chrome.google.com/webstore/detail/ekeohajnaijgjgcelpbajmfddlonckfm/"><i
+                    class="fa fa-chrome right"></i>Chrome App</a>
+            <a class="waves-effect waves-light btn-large black noapplink" style="margin-bottom: 8px;"
+               href="https://play.google.com/store/apps/details?id=appinventor.ai_jbithell_JB80.SO"><i
+                    class="fa fa-google right"></i>Android App</a>
+            <a class="waves-effect waves-light btn-large black noapplink" style="margin-bottom: 8px;"
+               href="https://www.amazon.co.uk/Sapiens-Optio-Latin-English-Translator/dp/B00HUX2RTM/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1389856632&sr=1-1&keywords=Sapiens+Optio"><i
+                    class="fa fa-amazon right"></i>Amazon App</a>
         </div>
 
-      <br><br>
+        <br><br>
 
     </div>
-  </div>
-  <div class="section" id="translate-banner" style="display: none; min-height: 90%; margin: auto; position: absolute; top: 57px; left: 0; bottom: 0; right: 0;">
-      <div class="container">
-          <div class="row">
-              <div class="input-field col s12">
-                  <input id="q" type="text" placeholder="Enter Text to Translate..." autocomplete="off" />
-              </div>
-              <div class="input-field col s6 center">
-                  <button class="btn waves-effect waves-light red darken-2" id="latengtranslatebutton">Latin&nbsp;English</button>
-              </div>
-              <div class="input-field col s6 center">
-                  <button class="btn waves-effect waves-light red darken-2" id="englattranslatebutton">English&nbsp;Latin</button>
-              </div>
-          </div>
-          <div class="row center" id="translateresult" style="display: none;">
-              <table style="width: 100%;">
-                  <tr><td id="resulttagline" style="width:100%; font-style: italic;"></td><td style="width: 78px;"><button class="btn blue darken-2 btn-small reportissue"><i class="fa fa-question"></i></button></td><td style="width: 78px;"><button class="btn blue darken-2 btn-small" id="printout"><i class="fa fa-print"></i></button></td></tr>
-              </table>
-              <pre id="result" style="text-align: left; overflow: auto;"></pre>
-          </div>
-          <div class="row center" id="loader" style="display: none; margin-top: 100px;">
-              <div class="preloader-wrapper big active">
-                  <div class="spinner-layer spinner-blue">
-                      <div class="circle-clipper left">
-                          <div class="circle"></div>
-                      </div><div class="gap-patch">
-                      <div class="circle"></div>
-                  </div><div class="circle-clipper right">
-                      <div class="circle"></div>
-                  </div>
-                  </div>
-
-                  <div class="spinner-layer spinner-red">
-                      <div class="circle-clipper left">
-                          <div class="circle"></div>
-                      </div><div class="gap-patch">
-                      <div class="circle"></div>
-                  </div><div class="circle-clipper right">
-                      <div class="circle"></div>
-                  </div>
-                  </div>
-
-                  <div class="spinner-layer spinner-yellow">
-                      <div class="circle-clipper left">
-                          <div class="circle"></div>
-                      </div><div class="gap-patch">
-                      <div class="circle"></div>
-                  </div><div class="circle-clipper right">
-                      <div class="circle"></div>
-                  </div>
-                  </div>
-
-                  <div class="spinner-layer spinner-green">
-                      <div class="circle-clipper left">
-                          <div class="circle"></div>
-                      </div><div class="gap-patch">
-                      <div class="circle"></div>
-                  </div><div class="circle-clipper right">
-                      <div class="circle"></div>
-                  </div>
-                  </div>
-              </div>
-          </div>
-
-      </div>
-  </div>
-
-  <footer class="page-footer blue-grey" id="footer" style="bottom: 0;">
+</div>
+<div class="section" id="translate-banner"
+     style="display: none; min-height: 90%; margin: auto; position: absolute; top: 57px; left: 0; bottom: 0; right: 0;">
     <div class="container">
-      <div class="row">
-          <div class="col l12 s12">
-          <h5 class="white-text">About</h5>
-          <p class="grey-text text-lighten-4">
-            Sapiens Optio is a free online Latin translator, powered by a dictionary of over 39,000 words, originally compiled by William Whitaker.
-          </p>
-          <p class="grey-text text-lighten-4">
-            The developer would like to thank William Whitaker, for developing the dictionary and licensing 3rd party clients, of which this is one.<br/>
-            Latin and English dictionary used in this program is Copyright &copy; 1993-2010 William Whitaker<br/>
-            This application would not have been possible without the help and continual support of the University of Notre Dame Archives, whose server originally hosted parts of this project and Whitaker's dictionary.
-          </p>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="q" type="text" placeholder="Enter Text to Translate..." autocomplete="off"/>
+            </div>
+            <div class="input-field col s6 center">
+                <button class="btn waves-effect waves-light red darken-2" id="latengtranslatebutton">
+                    Latin&nbsp;English
+                </button>
+            </div>
+            <div class="input-field col s6 center">
+                <button class="btn waves-effect waves-light red darken-2" id="englattranslatebutton">
+                    English&nbsp;Latin
+                </button>
+            </div>
         </div>
-        <div class="col l12 s12">
-            <i><a class="white-text reportissue" href="#">Report a problem</a></i>
+        <div class="row center" id="translateresult" style="display: none;">
+            <table style="width: 100%;">
+                <tr>
+                    <td id="resulttagline" style="width:100%; font-style: italic;"></td>
+                    <td style="width: 78px;">
+                        <button class="btn blue darken-2 btn-small reportissue"><i class="fa fa-question"></i></button>
+                    </td>
+                    <td style="width: 78px;">
+                        <button class="btn blue darken-2 btn-small" id="printout"><i class="fa fa-print"></i></button>
+                    </td>
+                </tr>
+            </table>
+            <pre id="result" style="text-align: left; overflow: auto;"></pre>
         </div>
-      </div>
+        <div class="row center" id="loader" style="display: none; margin-top: 100px;">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="page-footer blue-grey" id="footer" style="bottom: 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col l12 s12">
+                <h5 class="white-text">About</h5>
+                <p class="grey-text text-lighten-4">
+                    Sapiens Optio is a free online Latin translator, powered by a dictionary of over 39,000 words,
+                    originally compiled by William Whitaker.
+                </p>
+                <p class="grey-text text-lighten-4">
+                    The developer would like to thank William Whitaker, for developing the dictionary and licensing 3rd
+                    party clients, of which this is one.<br/>
+                    Latin and English dictionary used in this program is Copyright &copy; 1993-2010 William
+                    Whitaker<br/>
+                    This application would not have been possible without the help and continual support of the
+                    University of Notre Dame Archives, whose server originally hosted parts of this project and
+                    Whitaker's dictionary.
+                </p>
+            </div>
+            <div class="col l12 s12">
+                <i><a class="white-text reportissue" href="#">Report a problem</a></i>
+            </div>
+        </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">
-          <p class="white-text">A Bithell Studios Project. &copy;2017 <a class="white-text noapplink" href="https://www.jbithell.com">James Bithell</a></p>
-      </div>
+        <div class="container">
+            <p class="white-text">A Bithell Studios Project. &copy;2017 <a class="white-text noapplink"
+                                                                           href="https://www.jbithell.com">James
+                Bithell</a></p>
+        </div>
     </div>
-  </footer>
+</footer>
 <div id="reportissuemodal" class="modal modal-fixed-footer">
     <div class="modal-content">
         <h4>Report a Problem</h4>
-        <p>To report a problem, please E-Mail hi@jbithell.com with details of the issue, or contact the developer using the form at <a class="noapplink" href="https://www.jbithell.com">www.jbithell.com</a></p>
+        <p>To report a problem, please E-Mail hi@jbithell.com with details of the issue, or contact the developer using
+            the form at <a class="noapplink" href="https://www.jbithell.com">www.jbithell.com</a></p>
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
     </div>
 </div>
 
-  <!--  Scripts-->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/materialize.js"></script>
-    <script src="js/FileSaver.min.js"></script> <!--https://github.com/eligrey/FileSaver.js-->
-  <script src="js/jsPDF/jspdf.js"></script><!--https://github.com/MrRio/jsPDF-->
-  <script src="js/init.js"></script>
+<!--  Scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/FileSaver.min.js"></script> <!--https://github.com/eligrey/FileSaver.js-->
+<script src="js/jsPDF/jspdf.js"></script><!--https://github.com/MrRio/jsPDF-->
+<script src="js/init.js"></script>
 
 
-    <!--MONITORING KEYWORD--><!--W2nPdk2J8bGDrDL51ot62133qLs0h8S9U28Kos6h--><!--END MONITORING KEYWORD-->
+<!--MONITORING KEYWORD--><!--W2nPdk2J8bGDrDL51ot62133qLs0h8S9U28Kos6h--><!--END MONITORING KEYWORD-->
 </body>
 </html>
