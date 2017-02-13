@@ -15,10 +15,24 @@
   ],
   "author": "JBithell",
   "devDependencies": {
-    "electron": "^1.4.1"
+    "electron": "^1.4.1",
+    "electron-builder": "^13.6.0"
   },
   "dependencies": {
     "hammerjs": "^2.0.8",
     "jquery": "^2.2.4"
+  },
+  "build": {
+    "appId": "com.jbithell.sapiensoptio",
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "iconUrl": ""
+    }
+  },
+  "scripts": {
+    "pack": "build --dir",
+    "dist": "build"
   }
 }
