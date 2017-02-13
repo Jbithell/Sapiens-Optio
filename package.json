@@ -1,6 +1,6 @@
 {
   "name": "sapiens-optio",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Sapiens Optio is a free online Latin translator, powered by a dictionary of over 39,000 words, originally compiled by William Whitaker.",
   "main": "js/electronappmain.js",
   "scripts": {
