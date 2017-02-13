@@ -19,3 +19,23 @@ html {
     /* Required for page height hotfix */
     height: 100%;
 }
+
+/* Theme the placeholder text */
+#headerbigscreenq *::-webkit-input-placeholder {
+    color: white;
+}
+
+#headerbigscreenq *:-moz-placeholder {
+    /* FF 4-18 */
+    color: white;
+}
+
+#headerbigscreenq *::-moz-placeholder {
+    /* FF 19+ */
+    color: white;
+}
+
+#headerbigscreenq *:-ms-input-placeholder {
+    /* IE 10+ */
+    color: white;
+}
