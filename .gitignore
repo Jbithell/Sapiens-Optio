@@ -43,3 +43,4 @@ fabric.properties
 
 #For electron app
 node_modules
+dist
