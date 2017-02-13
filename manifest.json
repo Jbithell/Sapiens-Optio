@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Sapiens Optio",
+  "version": "7.0",
+  "minimum_chrome_version": "23",
+  "icons": {
+    "16": "images/16squarelogo.png",
+    "128": "images/128squarelogo.png"
+  },
+  "app": {
+    "background": {
+      "scripts": [
+        "js/chromeappmain.js"
+      ]
+    }
+  }
+}
